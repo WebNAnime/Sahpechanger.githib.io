@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes changer</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: -webkit-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+        }
+
+        .shapes {
+            height: 100px;
+            width: 100px;
+            border: 5px double black;
+            position: absolute;
+            top: 2cm;
+            display: none;
+
+        }
+
+        .btns {
+            word-spacing: 25px;
+        }
+
+        button {
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="sh" class="shapes"></div>
+
+
+    <div class="btns">
+        <button id="bt2" onclick="fun1()">square</button>
+        <button id="bt1" onclick="fun2()">circle</button>
+        <button id="bt3" onclick="fun3()">rectangle</button>
+    </div>
+</body>
+<script>
+
+    function fun1() {
+        let a = document.getElementById('sh')
+        a.style.width = "100px"
+        a.style.height = "100px"
+        a.style.display = "block"
+        a.style.borderRadius = "0%"
+        a.style.transition = "all 1s linear"
+
+
+    }
+    function fun2() {
+        let a = document.getElementById('sh');
+        a.style.width = "180px"
+        a.style.height = "180px"
+        a.style.borderRadius = "50%"
+        a.style.display = "block"
+        a.style.transition = "all 1s linear"
+
+
+    }
+    function fun3() {
+        let a = document.getElementById('sh');
+        a.style.width = "180px"
+        a.style.height = "100px"
+        a.style.display = "block"
+        a.style.borderRadius = "0%"
+        a.style.transition = "all 1s linear"
+
+    }
+
+</script>
+
+</html>
